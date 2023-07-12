@@ -1,0 +1,217 @@
+.skill-icon:nth-child(1) {
+  transition-delay: 150ms;
+}
+
+.skill-icon:nth-child(2) {
+  transition-delay: 300ms;
+}
+
+.skill-icon:nth-child(3) {
+  transition-delay: 450ms;
+}
+
+.skill-icon:nth-child(4) {
+  transition-delay: 600ms;
+}
+
+.skill-icon:nth-child(5) {
+  transition-delay: 750ms;
+}
+
+.skill-icon:nth-child(6) {
+  transition-delay: 900ms;
+}
+
+.skill-icon:nth-child(7) {
+  transition-delay: 1050ms;
+}
+
+.skill-icon:nth-child(8) {
+  transition-delay: 1200ms;
+}
+
+.skill-icon:nth-child(9) {
+  transition-delay: 1350ms;
+}
+
+@font-face {
+  font-family: "Aquire";
+  src: url("./assets/Aquire-BW0ox.otf");
+}
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
+@keyframes neon-yellow {
+  from {
+    text-shadow: 0 0 6px rgba(202, 228, 225, 0.92), 0 0 30px rgba(202, 228, 225, 0.34), 0 0 12px rgba(140, 124, 1, 0.569), 0 0 21px rgba(140, 124, 31, 0.92), 0 0 34px rgba(140, 124, 98, 0.78), 0 0 54px rgba(140, 124, 120, 0.92);
+  }
+  to {
+    text-shadow: 0 0 6px rgba(202, 228, 225, 0.98), 0 0 30px rgba(202, 228, 225, 0.42), 0 0 12px rgba(140, 124, 1, 0.58), 0 0 22px rgba(140, 124, 31, 0.84), 0 0 38px rgba(140, 124, 98, 0.88), 0 0 60px rgb(140, 124, 120);
+  }
+}
+@keyframes neon-red {
+  from {
+    text-shadow: 0 0 6px rgba(202, 228, 225, 0.92), 0 0 30px rgba(202, 228, 225, 0.34), 0 0 12px rgba(125, 22, 1, 0.52), 0 0 21px rgba(125, 22, 31, 0.92), 0 0 34px rgba(125, 22, 98, 0.78), 0 0 54px rgba(125, 22, 120, 0.92);
+  }
+  to {
+    text-shadow: 0 0 6px rgba(202, 228, 225, 0.98), 0 0 30px rgba(202, 228, 225, 0.42), 0 0 12px rgba(125, 22, 1, 0.58), 0 0 22px rgba(125, 22, 31, 0.84), 0 0 38px rgba(125, 22, 98, 0.88), 0 0 60px rgb(125, 22, 120);
+  }
+}
+@keyframes swoop-in {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 3s;
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 3s;
+  }
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+body {
+  background-color: rgb(44, 44, 50);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.bullet-points-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.bullet-points-container .bullet-point-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.bullet-points-container .bullet-point-container h1 {
+  margin: 12px 12px;
+  font-size: xx-large;
+}
+
+.header-text {
+  color: white;
+  font-family: "Aquire";
+  font-size: 3vw;
+  margin: 24px 0 0 0;
+}
+
+.header-text:hover {
+  cursor: pointer;
+}
+
+.landing-page-text {
+  color: white;
+  font-family: "Aquire";
+  font-size: 3vw;
+  margin: 24px 0 0 0;
+}
+
+.skill-category-container {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  margin: 0 24px;
+  padding: 12px;
+}
+.skill-category-container .skill-category-text {
+  transform: rotate(90deg);
+}
+.skill-category-container h1 {
+  color: white;
+  font-family: "Aquire";
+  font-size: 3vw;
+  margin: 24px 0 0 0;
+  color: white;
+  margin: unset;
+}
+
+.skill-icon {
+  width: 24px;
+  animation: swoop-in 3.5s;
+}
+
+.typing-effect-text {
+  color: white;
+  font-family: "Aquire";
+  font-size: 3vw;
+  margin: 24px 0 0 0;
+  overflow: hidden;
+  border-right: 0.1em solid orange;
+  white-space: nowrap;
+  padding: 0 12px 0 0;
+  margin: 24px auto;
+  animation: typing 3.5s steps(30, end), blink-caret 0.75s step-end infinite;
+}
+
+#landing-page-container {
+  display: flex;
+  flex-direction: row;
+  margin: 0 15%;
+}
+
+#landing-page-image {
+  height: 100vh;
+}
+
+#landing-page-text-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#landing-page-text-box h1 {
+  margin: unset;
+  animation: neon-red 0.1s ease-in-out infinite alternate;
+}
+#landing-page-text-box span {
+  font-weight: bold;
+  margin: 18px 0 0 0;
+  animation: neon-red 0.1s ease-in-out infinite alternate;
+}
+#landing-page-text-box span:hover {
+  cursor: pointer;
+  animation: neon-yellow 0.1s ease-in-out infinite alternate;
+}
+
+#resume-header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5vh 0 0 0;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#skills-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 75vh;
+}
+
+#test-div {
+  height: 100vh;
+}
+
+/*# sourceMappingURL=output.css.map */

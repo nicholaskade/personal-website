@@ -1,0 +1,228 @@
+// Loops
+
+@for $i from 1 through 9 {
+    .skill-icon:nth-child(#{$i}) {
+        transition-delay:(#{150*$i}ms);
+    }
+}
+
+// Mixins
+
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin site-text {
+    color: white;
+    font-family: "Aquire";
+    font-size: 3vw;
+    margin: 24px 0 0 0;
+}
+
+// Fonts
+
+@font-face {
+    font-family: "Aquire";
+    src: url("./assets/Aquire-BW0ox.otf")
+}
+
+// Keyframes
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange }
+}
+
+@keyframes neon-yellow {
+    from {
+        text-shadow:
+        0 0 6px rgba(202,228,225,0.92),
+        0 0 30px rgba(202,228,225,0.34),
+        0 0 12px rgba(140, 124, 1, 0.569),
+        0 0 21px rgba(140,124,31,0.92),
+        0 0 34px rgba(140,124,98,0.78),
+        0 0 54px rgba(140,124,120,0.92);
+    }
+    to {
+        text-shadow:
+        0 0 6px rgba(202,228,225,0.98),
+        0 0 30px rgba(202,228,225,0.42),
+        0 0 12px rgba(140,124,1,0.58),
+        0 0 22px rgba(140,124,31,0.84),
+        0 0 38px rgba(140,124,98,0.88),
+        0 0 60px rgba(140,124,120,1);
+    };
+}
+
+@keyframes neon-red {
+    from {
+        text-shadow:
+        0 0 6px rgba(202,228,225,0.92),
+        0 0 30px rgba(202,228,225,0.34),
+        0 0 12px rgba(125,22,1,0.52),
+        0 0 21px rgba(125,22,31,0.92),
+        0 0 34px rgba(125,22,98,0.78),
+        0 0 54px rgba(125,22,120,0.92);
+    }
+    to {
+        text-shadow:
+        0 0 6px rgba(202,228,225,0.98),
+        0 0 30px rgba(202,228,225,0.42),
+        0 0 12px rgba(125,22,1,0.58),
+        0 0 22px rgba(125,22,31,0.84),
+        0 0 38px rgba(125,22,98,0.88),
+        0 0 60px rgba(125,22,120,1);
+    }
+}
+
+@keyframes swoop-in {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+        transition: all 3s;
+    } to {
+        opacity: 1;
+        transform: translateX(0);
+        transition: all 3s;
+    }
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+// Elements
+
+body {
+    background-color:rgb(44, 44, 50);
+    @include flex-column();
+    justify-content: center;
+};
+
+// Classes
+
+.bullet-points-container {
+    @include flex-column();
+    align-items: flex-start;
+
+    .bullet-point-container {
+        @include flex-row();
+        align-items: center;
+
+        h1 {
+            margin: 12px 12px;
+            font-size: xx-large;
+        }
+    }
+}
+
+.header-text {
+    @include site-text();
+}
+
+.header-text:hover {
+    cursor: pointer;
+}
+
+.landing-page-text {
+    @include site-text();
+}
+
+.skill-category-container {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin: 0 24px;
+    padding: 12px;
+
+    .skill-category-text {
+        transform: rotate(90deg);
+    }
+
+    h1 {
+        @include site-text();
+        color: white;
+        margin: unset;
+    }
+}
+
+.skill-icon {
+    width: 24px;
+    animation: swoop-in 3.5s;
+}
+
+.typing-effect-text {
+    @include site-text();
+
+    overflow: hidden;
+    border-right: .1em solid orange;
+    white-space: nowrap;
+    padding: 0 12px 0 0;
+    margin: 24px auto;
+    animation:
+        typing 3.5s steps(30, end),
+        blink-caret .75s step-end infinite,
+}
+
+// IDs 
+
+#landing-page-container {
+    @include flex-row();
+    margin: 0 15%;
+};
+
+#landing-page-image {
+    height: 100vh;
+}
+
+
+#landing-page-text-box {
+    @include flex-column();
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        margin: unset;
+        animation: neon-red .1s ease-in-out infinite alternate;
+    }
+
+    span {
+        font-weight: bold;
+        margin: 18px 0 0 0;
+        animation: neon-red .1s ease-in-out infinite alternate;
+    }
+
+    span:hover {
+        cursor: pointer;
+        animation: neon-yellow .1s ease-in-out infinite alternate;
+    }
+}
+
+#resume-header-container {  
+    @include flex-column();
+    align-items: center;
+    margin: 5vh 0 0 0;
+}
+
+#root {
+    @include flex-column();
+    justify-content: center;
+    align-items: center;
+}
+
+#skills-container {
+    @include flex-row();
+    justify-content: center;
+    height: 75vh;
+}
+
+#test-div {
+    height: 100vh;
+}
