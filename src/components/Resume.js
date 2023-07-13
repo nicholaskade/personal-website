@@ -1,10 +1,11 @@
 import Skills from "./Skills";
+import Education from "./Education";
+import Experience from "./Experience";
 
-import { useInView } from "react-intersection-observer";
 import { useNavigate } from "react-router-dom";
 
 function Resume() {
-    const { ref, inView } = useInView();
+
     const nav = useNavigate();
 
     return (
@@ -15,6 +16,8 @@ function Resume() {
             </div>
 
             <Skills/>
+            <Education />
+            <Experience />
         </>
     )
 };

@@ -39,8 +39,8 @@ function Skills() {
         return (
             <div className="bullet-point-container">
                 <img src={skill.image} className="skill-icon"/>
-            <h1>{skill.name}</h1>
-        </div>
+                <h1>{skill.name}</h1>
+            </div>
         ) });
 
     return (
@@ -50,7 +50,7 @@ function Skills() {
                 <div className="bullet-points-container">
                     { generateFESkills }
                 </div>
-                <h1 className="skill-category-text">Skills</h1>
+                <h1 id="skills-label" className="skill-category-text">Skills</h1>
             </div>
 
             <div className="skill-category-container">
