@@ -144,7 +144,6 @@ body {
 
 .typing-effect-text {
     @include site-text();
-
     overflow: hidden;
     border-right: .1em solid orange;
     white-space: nowrap;
@@ -289,6 +288,13 @@ body {
     align-items: center;
     margin: 100px 0 0;
 }
+
+#root {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
 #skills-container {
     @include flex-row();
