@@ -12,18 +12,18 @@ function Skills() {
         
 
     const frontend = [
-        {image: jsIcon, name: "JavaScript"}, 
-        {image: reactIcon, name: "React"}, 
-        {image: cssIcon, name: "CSS"}, 
-        {image: sassIcon, name: "SASS"}
+        { image: jsIcon, name: "JavaScript" }, 
+        { image: reactIcon, name: "React" }, 
+        { image: cssIcon, name: "CSS" }, 
+        { image: sassIcon, name: "SASS" }
     ];
 
     const backend = [ 
-        {image: rubyIcon, name: "Ruby"}, 
-        {image: railsIcon, name: "Rails"}, 
-        {image: pythonIcon, name: "Python"}, 
-        {image: postgresqlIcon, name:"PostgreSQL"}, 
-        {image: firebaseIcon, name: "Firebase"}
+        { image: rubyIcon, name: "Ruby" }, 
+        { image: railsIcon, name: "Rails" }, 
+        { image: pythonIcon, name: "Python" }, 
+        { image: postgresqlIcon, name: "PostgreSQL" }, 
+        { image: firebaseIcon, name: "Firebase" }
     ];
 
     const generateFESkills = frontend.map((skill) => { 
