@@ -31,9 +31,9 @@
   }
 }
 body {
-  background-color: rgb(44, 44, 50);
   display: flex;
   flex-direction: column;
+  background-color: rgb(44, 44, 50);
   justify-content: center;
 }
 
@@ -61,15 +61,6 @@ body {
   padding: 18px;
 }
 
-.header-text:hover {
-  cursor: pointer;
-}
-
-.hidden {
-  opacity: 0;
-  transition: all 1s;
-}
-
 .landing-page-text {
   color: white;
   font-family: "Aquire";
@@ -81,6 +72,7 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
   height: 100%;
   width: 100%;
 }
@@ -89,7 +81,7 @@ body {
   flex-direction: column;
   align-items: center;
   margin: 0 24px;
-  width: 33%;
+  width: 300px;
 }
 .schools-container .school-container img {
   width: 200px;
@@ -104,11 +96,6 @@ body {
   color: white;
   word-wrap: none;
   font-family: "Trebuchet MS";
-}
-
-.shown {
-  opacity: 1;
-  transition: all 2s;
 }
 
 .skill-category-container {
@@ -155,7 +142,7 @@ body {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 100vh;
+  height: 800px;
 }
 #education-container h1 {
   color: white;
@@ -172,7 +159,7 @@ body {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 100vh;
+  height: 900px;
 }
 #experience-container h1 {
   color: white;
@@ -216,6 +203,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100%;
+  margin: 0 0 100px;
 }
 #experience-container .job-container img {
   width: 125px;
@@ -230,7 +218,7 @@ body {
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
-  margin: 24px 0 0 0;
+  margin: 24px 0 12px;
 }
 #experience-container .job-skills-container p {
   color: white;
@@ -245,9 +233,14 @@ body {
 #footer-container {
   display: flex;
   flex-direction: column;
-  width: 25%;
+  background-color: rgb(44, 44, 50);
+  border-top: 1px solid orange;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
   align-items: center;
-  margin: 24px 0;
+  margin: 24px 0 0;
 }
 #footer-container #resume-link {
   color: white;
@@ -262,7 +255,7 @@ body {
   display: flex;
   flex-direction: row;
   margin: 24px 0;
-  width: 100%;
+  width: 500px;
   align-items: center;
   justify-content: space-around;
 }
@@ -270,56 +263,18 @@ body {
   width: 50px;
 }
 
-#landing-page-container {
-  display: flex;
-  flex-direction: row;
-  margin: 0 15%;
-}
-
-#landing-page-image {
-  height: 100vh;
-}
-
-#landing-page-text-box {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-#landing-page-text-box h1 {
-  margin: unset;
-  animation: neon-red 0.1s ease-in-out infinite alternate;
-}
-#landing-page-text-box span {
-  font-weight: bold;
-  margin: 18px 0 0 0;
-  animation: neon-red 0.1s ease-in-out infinite alternate;
-}
-#landing-page-text-box span:hover {
-  cursor: pointer;
-  animation: neon-yellow 0.1s ease-in-out infinite alternate;
-}
-
 #resume-header-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 5vh 0 0 0;
-}
-
-#root {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
+  margin: 100px 0 0;
 }
 
 #skills-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  height: 75vh;
+  height: 600px;
 }
 
 #skills-label {

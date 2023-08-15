@@ -1,16 +1,9 @@
-import { useInView } from "react-intersection-observer";
-
 import mvIcon from "../assets/mansueto-ventures-icon.jpeg";
 
 function Experience() {
-    const { ref, inView } = useInView();
 
     return (
-        <div
-            id="experience-container"
-            className={ inView ? "shown" : "hidden"} 
-            ref={ref}   
-        >
+        <div id="experience-container">
             <h1>Work Experience</h1>
             <div className="job-container">
                 <img alt="Inc. Magazine and Fast Company icon" src={mvIcon}/>

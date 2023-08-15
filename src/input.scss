@@ -54,8 +54,8 @@
 // Elements
 
 body {
-    background-color:rgb(44, 44, 50);
     @include flex-column();
+    background-color:rgb(44, 44, 50);
     justify-content: center;
 };
 
@@ -82,15 +82,6 @@ body {
     padding: 18px;
 }
 
-.header-text:hover {
-    cursor: pointer;
-}
-
-.hidden {
-    opacity: 0;
-    transition: all 1s;
-}
-
 .landing-page-text {
     @include site-text();
 }
@@ -98,6 +89,7 @@ body {
 .schools-container {
     @include flex-row();
     align-items: center;
+    justify-content: center;
     height: 100%;
     width: 100%;
 
@@ -105,7 +97,7 @@ body {
         @include flex-column();
         align-items: center;
         margin: 0 24px;
-        width: 33%;
+        width: 300px;
 
         img {
             width: 200px;
@@ -123,11 +115,6 @@ body {
             font-family: "Trebuchet MS";
         }
     }
-}
-
-.shown {
-    opacity: 1;
-    transition: all 2s;
 }
 
 .skill-category-container {
@@ -174,7 +161,7 @@ body {
     @include flex-column();
     align-items: center;
     width: 100%;
-    height: 100vh;
+    height: 800px;
 
     h1 {
         @include site-text();
@@ -188,7 +175,7 @@ body {
     @include flex-column();
     align-items: center;
     width: 100%;
-    height: 100vh;
+    height: 900px;
 
     h1 {
         @include site-text();
@@ -234,6 +221,7 @@ body {
         justify-content: center;
         align-items: center;
         height: 100%;
+        margin: 0 0 100px;
 
         img {
             width: 125px;
@@ -249,7 +237,7 @@ body {
         @include flex-row();
         justify-content: center;
         flex-wrap: wrap;
-        margin: 24px 0 0 0;
+        margin: 24px 0 12px;
         
         p {
             color: white;
@@ -265,9 +253,14 @@ body {
 
 #footer-container {
     @include flex-column();
-    width: 25%;
+    background-color: rgb(44, 44, 50);
+    border-top: 1px solid orange;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
     align-items: center;
-    margin: 24px 0;
+    margin: 24px 0 0;
 
     #resume-link {
         color: white;
@@ -282,7 +275,7 @@ body {
 #footer-icons-container {
     @include flex-row();
     margin: 24px 0;
-    width: 100%;
+    width: 500px;
     align-items: center;
     justify-content: space-around;
     
@@ -291,55 +284,16 @@ body {
     }
 }
 
-#landing-page-container {
-    @include flex-row();
-    margin: 0 15%;
-}
-
-#landing-page-image {
-    height: 100vh;
-}
-
-
-#landing-page-text-box {
-    @include flex-column();
-    justify-content: center;
-    align-items: center;
-
-    h1 {
-        margin: unset;
-        animation: neon-red .1s ease-in-out infinite alternate;
-    }
-
-    span {
-        font-weight: bold;
-        margin: 18px 0 0 0;
-        animation: neon-red .1s ease-in-out infinite alternate;
-    
-        &:hover {
-            cursor: pointer;
-            animation: neon-yellow .1s ease-in-out infinite alternate;
-        }
-    }
-}
-
 #resume-header-container {  
     @include flex-column();
     align-items: center;
-    margin: 5vh 0 0 0;
-}
-
-#root {
-    @include flex-column();
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+    margin: 100px 0 0;
 }
 
 #skills-container {
     @include flex-row();
     justify-content: center;
-    height: 75vh;
+    height: 600px;
 }
 
 #skills-label {

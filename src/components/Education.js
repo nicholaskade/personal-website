@@ -1,11 +1,8 @@
-import { useInView } from "react-intersection-observer";
-
 import unaIcon from "../assets/una-icon.png";
 import gcCunyIcon from "../assets/gc-cuny-icon.png";
 import flatironIcon from "../assets/flatiron-icon.png";
 
 function Education() {
-    const { ref, inView } = useInView();
 
     const schools = [
         { name: "University of North Alabama", icon: unaIcon, credential: "Bachelor of Arts", concentration: "Political Science" },
@@ -29,11 +26,7 @@ function Education() {
     });
 
     return (
-        <div 
-            id="education-container" 
-            className={ inView ? "shown" : "hidden"} 
-            ref={ref}
-        >
+        <div id="education-container">
             <h1 className="education-header-text">Education</h1>
             <div className="schools-container">
                 {generateEducation}
