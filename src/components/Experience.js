@@ -3,8 +3,8 @@ import mvIcon from "../assets/mansueto-ventures-icon.jpeg";
 function Experience() {
 
     return (
-        <div id="experience-container">
-            <h1>Work Experience</h1>
+        <div className="section-container" id="experience-container">
+            <h1 className="section-label">Work Experience</h1>
             <div className="job-container">
                 <img alt="Inc. Magazine and Fast Company icon" src={mvIcon}/>
                 <div className="job-header-container">
@@ -25,14 +25,11 @@ function Experience() {
                 <div className="job-responsibilities-container">
                     <ul>
                         <li>
-                            <b>Managed</b> the group subscriptions program for <i>Inc. Magazine</i> and <i>Fast Company</i> by communicating 
-                            <br/> with an array of clients, ranging from small businesses to Fortune 500 companies
+                            <b>Managed</b> the group subscriptions program for <i>Inc. Magazine</i> and <i>Fast Company</i> by communicating with an array of clients, ranging from small businesses to Fortune 500 companies
                         </li>
 
                         <li>
-                            Proposed, designed, implemented <b>automation</b> using Smartsheet to announce client subscription changes 
-                            <br/> and upcoming expirations via Slack, increasing sales by up to 70%, improving overall client retention, and 
-                            <br/><b>enabling effortless tracking and maintenance</b> of client accounts
+                            Proposed, designed, implemented <b>automation</b> using Smartsheet to announce client subscription changes and upcoming expirations via Slack, increasing sales by up to 70%, improving overall client retention, and <b>enabling effortless tracking and maintenance</b> of client accounts
                         </li>
 
                         <li>
@@ -40,8 +37,7 @@ function Experience() {
                         </li>
 
                         <li>
-                            Designed, implemented method to associate subscription data with relevant metadata using 
-                            <br/><b>Microsoft Excel functions</b> to rectify data correctness issues in database with over 7,000 entries
+                            Designed, implemented method to associate subscription data with relevant metadata using <b>Microsoft Excel functions</b> to rectify data correctness issues in database with over 7,000 entries
                         </li>
                     </ul>
                 </div>

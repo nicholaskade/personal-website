@@ -14,10 +14,19 @@
 }
 
 @mixin site-text {
-    color: white;
-    font-family: "Aquire";
-    font-size: 42px;
-    margin: 24px 0 0 0;
+    @media screen and (max-width: 549px) {
+        color: white;
+        font-family: "Aquire";
+        font-size: 16px;
+        margin: 0 0 12px;
+    }
+
+    @media screen and (min-width: 550px) {
+        color: white;
+        font-family: "Aquire";
+        font-size: 42px;
+        margin: 24px 0 0 0;
+    }
 }
 
 // Fonts
@@ -63,83 +72,160 @@ body {
 
 .bullet-points-container {
     @include flex-column();
-    align-items: flex-start;
 
     .bullet-point-container {
         @include flex-row();
         align-items: center;
 
-        h1 {
-            margin: 12px 12px;
-            font-size: xx-large;
+        @media screen and (max-width: 1249px) {
+            width: 160px;
+            margin: 12px 0 0;
+
+            .skill-name {
+                margin: 8px;
+                font-size: 16px;
+            }
+        }
+    
+        @media screen and (min-width: 1250px) {
+            .skill-name {
+                margin: 12px;
+                font-size: 36px;
+            }
         }
     }
+
+
 }
 
 .header-text {
     @include site-text();
+    @media screen and (max-width: 1249px) {
+        padding: 8px;
+    }
+
+    @media screen and (min-width: 1250px) {
+        padding: 18px;
+    }
+
     border: orange solid;
-    padding: 18px;
 }
 
-.landing-page-text {
-    @include site-text();
-}
-
-.schools-container {
-    @include flex-row();
+#education-container {
+    @include flex-column;
     align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
+}
+
+
+#schools-container {
+    @media screen and (max-width: 1249px) {
+        display: flex;
+        flex-direction: column-reverse;    
+    }
+
+    @media screen and (min-width: 1250px) {
+        @include flex-row();
+        align-items: center;
+        justify-content: center;
+    }
 
     .school-container {
         @include flex-column();
         align-items: center;
-        margin: 0 24px;
         width: 300px;
 
-        img {
-            width: 200px;
-            margin: 0 0 12px 0;
-            border: white solid; 
-            padding: 8px;
-        }
+        @media screen and (max-width: 1249px) {
+            margin: 12px 0;
 
-        p {
-            margin: unset;
-            font-size: 20px;
-            text-align: center;
-            color: white;
-            word-wrap: none;
-            font-family: "Trebuchet MS";
+            img {
+                width: 100px;
+                margin: 12px 0;
+                border: white solid; 
+                padding: 8px;
+            }
+    
+            p {
+                margin: unset;
+                font-size: 14px;
+                text-align: center;
+                color: white;
+                word-wrap: none;
+                font-family: "Trebuchet MS";
+            }
+        }
+    
+        @media screen and (min-width: 1250px) {
+            margin: 0 24px;
+
+            img {
+                width: 200px;
+                margin: 0 0 12px 0;
+                border: white solid; 
+                padding: 8px;
+            }
+    
+            p {
+                margin: unset;
+                font-size: 20px;
+                text-align: center;
+                color: white;
+                word-wrap: none;
+                font-family: "Trebuchet MS";
+            }
         }
     }
 }
 
 .skill-category-container {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    margin: 0 24px;
-    padding: 12px;
-
-    .skill-category-text {
-        transform: rotate(90deg);
+    @media screen and (max-width: 1249px) {
+        @include flex-row();
+        align-items: center;
+        margin: 12px 0;
     }
 
+    @media screen and (min-width: 1250px) {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        margin: 0 24px;
+        padding: 12px;
+    }
+    
     h1 {
         @include site-text();
-        color: white;
         margin: unset;
         white-space: nowrap;
     }
 }
 
+#skills-divider {
+    @media screen and (max-width: 1249px) {
+        align-self: center;
+        width: 80%;
+        height: 2px;
+        border-top: solid orange;
+        margin: 12px 0 0;
+    }
+
+    @media screen and (min-width: 1250px) {
+        display: none;
+    }
+}
+
 .skill-icon {
-    width: 48px;
-    animation: swoop-in 3.5s;
-    margin: 8px;
+    @media screen and (max-width: 1249px) {
+        width: 24px;
+        height: 24px;
+        animation: swoop-in 3.5s;
+    }
+
+    @media screen and (min-width: 1250px) {
+        width: 48px;
+        width: 48px;
+        animation: swoop-in 3.5s;
+        margin: 8px;
+    }
+
 }
 
 .typing-effect-text {
@@ -156,33 +242,9 @@ body {
 
 // IDs 
 
-#education-container {
-    @include flex-column();
-    align-items: center;
-    width: 100%;
-    height: 800px;
-
-    h1 {
-        @include site-text();
-        text-align: center;
-        border: orange solid;
-        padding: 18px;
-    }
-}
-
 #experience-container {
     @include flex-column();
     align-items: center;
-    width: 100%;
-    height: 900px;
-
-    h1 {
-        @include site-text();
-        text-align: center;
-        border: orange solid;
-        padding: 18px;
-        margin: 0 0 18px;
-    }
 
     .job-header-container {
         @include flex-row();
@@ -208,6 +270,10 @@ body {
     }
 
     .job-responsibilities-container {
+        @media screen and (min-width: 1250px) {
+            width: 69%;
+        }
+
         li {
             color: white;
             margin: 8px;
@@ -223,10 +289,20 @@ body {
         margin: 0 0 100px;
 
         img {
-            width: 125px;
-            height: 125px;
-            padding: 12px;
-            margin: 8px; 
+            @media screen and (max-width: 1249px) {
+                width: 100px;
+                height: 100px;
+                padding: 8px;
+                margin: 24px 0 0;
+            }
+        
+            @media screen and (min-width: 1250px) {
+                width: 125px;
+                height: 125px;
+                padding: 12px;
+                margin: 24px 0 0;
+            }
+ 
             background-color: white;
             border-radius: 50%;
         }
@@ -252,19 +328,35 @@ body {
 
 #footer-container {
     @include flex-column();
+    align-items: center;
     background-color: rgb(44, 44, 50);
     border-top: 1px solid orange;
     position: fixed;
     bottom: 0;
     width: 100%;
-    height: 100px;
-    align-items: center;
-    margin: 24px 0 0;
+
+    @media screen and (min-width: 1249px) {
+        height: 75px;
+        margin: 12px 0 0;
+    }
+
+    @media screen and (min-width: 1250px) {
+        height: 100px;
+        margin: 24px 0 0;
+    }
 
     #resume-link {
         color: white;
         font-family: 'Trebuchet MS';
-        font-size: large;
+        
+        @media screen and (max-width: 1249px) {
+            font-size: medium;
+        }
+    
+        @media screen and (min-width: 1250px) {
+            font-size: large;
+        }    
+        
         text-decoration: none;
         border: 1px solid orange;
         padding: 8px;
@@ -274,19 +366,35 @@ body {
 #footer-icons-container {
     @include flex-row();
     margin: 24px 0;
-    width: 500px;
     align-items: center;
     justify-content: space-around;
     
-    .footer-icon {
-        width: 50px;
+    @media screen and (max-width: 1249px) {
+        width: 380px;
+        .footer-icon {
+            width: 36px;
+        }
+    }
+
+    @media screen and (min-width: 1250px) {
+        width: 500px;
+        .footer-icon {
+            width: 50px;
+        }
     }
 }
 
 #resume-header-container {  
     @include flex-column();
     align-items: center;
-    margin: 100px 0 0;
+    
+    @media screen and (max-width: 1249px) {
+        margin: 48px 0 24px;
+    }
+
+    @media screen and (min-width: 1250px) {
+        margin: 100px 0 0;
+    }
 }
 
 #root {
@@ -294,16 +402,73 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-
-#skills-container {
-    @include flex-row();
-    justify-content: center;
-    height: 600px;
 }
 
-#skills-label {
-    margin: 0 24px;
-    border: orange solid;
-    padding: 18px;
+#skill-column-container {
+    @media screen and (max-width: 1249px) {
+        @include flex-column();
+    }
+
+    @media screen and (min-width: 1250px) {
+        @include flex-row();
+    }
+
+}
+
+#skill-section-container {
+    @include flex-row();
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (max-width: 1249px) {
+        .skill-category-text {
+            border: solid orange;
+            padding: 8px;
+        }
+
+        #skills-label {
+            display: none;
+        }
+    }
+
+    #skills-label {
+        transform: rotate(90deg);
+    }
+
+    .skill-category-text {
+        transform: rotate(90deg);
+    }
+}
+
+.section-container {
+    height: fit-content;
+    width: 90%;
+
+    @media screen and (max-width: 1249px) {
+        margin: 0 0 24px;
+        border-top: solid orange;
+    }
+
+    @media screen and (min-width: 1250px) {
+        margin: 48px 0;
+    }
+}
+
+.section-label {
+    @include site-text();
+    height: fit-content;
+    width: fit-content;
+
+    @media screen and (max-width: 1249px) {
+        margin: 24px 0 0;
+        border: orange solid;
+        padding: 8px;
+        text-align: center;
+    }
+
+    @media screen and (min-width: 1250px) {
+        margin: 0 0 24px;
+        border: 2px solid orange;
+        padding: 18px;
+    }
 }

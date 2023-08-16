@@ -22,15 +22,15 @@ function Skills() {
         { image: rubyIcon, name: "Ruby" }, 
         { image: railsIcon, name: "Rails" }, 
         { image: pythonIcon, name: "Python" }, 
-        { image: postgresqlIcon, name: "PostgreSQL" }, 
-        { image: firebaseIcon, name: "Firebase" }
+        { image: firebaseIcon, name: "Firebase" },
+        { image: postgresqlIcon, name: "PostgreSQL" }
     ];
 
     const generateFESkills = frontend.map((skill) => { 
         return (
             <div className="bullet-point-container">
                 <img src={skill.image} className="skill-icon"/>
-                <h1>{skill.name}</h1>
+                <h1 className="skill-name">{skill.name}</h1>
             </div>
         )
     });
@@ -39,24 +39,28 @@ function Skills() {
         return (
             <div className="bullet-point-container">
                 <img src={skill.image} className="skill-icon"/>
-                <h1>{skill.name}</h1>
+                <h1 className="skill-name">{skill.name}</h1>
             </div>
         ) });
 
     return (
-        <div id="skills-container">
-            <div className="skill-category-container">
-                <h1 className="skill-category-text">Front End</h1>
-                <div className="bullet-points-container">
-                    { generateFESkills }
+        <div className="section-container" id="skill-section-container">
+            <h1 id="skills-label" className="section-label">Skills</h1>
+            <div id="skill-column-container">
+                <div className="skill-category-container">
+                    <h1 className="skill-category-text">Front End</h1>
+                    <div className="bullet-points-container">
+                        { generateFESkills }
+                    </div>
                 </div>
-                <h1 id="skills-label" className="skill-category-text">Skills</h1>
-            </div>
 
-            <div className="skill-category-container">
-                <h1 className="skill-category-text">Back End</h1>
-                <div className="bullet-points-container">
-                    { generateBESkills } 
+                <div id="skills-divider"></div>
+
+                <div className="skill-category-container">
+                    <h1 className="skill-category-text">Back End</h1>
+                    <div className="bullet-points-container">
+                        { generateBESkills } 
+                    </div>
                 </div>
             </div>
         </div>

@@ -40,95 +40,194 @@ body {
 .bullet-points-container {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
 }
 .bullet-points-container .bullet-point-container {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-.bullet-points-container .bullet-point-container h1 {
-  margin: 12px 12px;
-  font-size: xx-large;
+@media screen and (max-width: 1249px) {
+  .bullet-points-container .bullet-point-container {
+    width: 160px;
+    margin: 12px 0 0;
+  }
+  .bullet-points-container .bullet-point-container .skill-name {
+    margin: 8px;
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 1250px) {
+  .bullet-points-container .bullet-point-container .skill-name {
+    margin: 12px;
+    font-size: 36px;
+  }
 }
 
 .header-text {
-  color: white;
-  font-family: "Aquire";
-  font-size: 42px;
-  margin: 24px 0 0 0;
   border: orange solid;
-  padding: 18px;
+}
+@media screen and (max-width: 549px) {
+  .header-text {
+    color: white;
+    font-family: "Aquire";
+    font-size: 16px;
+    margin: 0 0 12px;
+  }
+}
+@media screen and (min-width: 550px) {
+  .header-text {
+    color: white;
+    font-family: "Aquire";
+    font-size: 42px;
+    margin: 24px 0 0 0;
+  }
+}
+@media screen and (max-width: 1249px) {
+  .header-text {
+    padding: 8px;
+  }
+}
+@media screen and (min-width: 1250px) {
+  .header-text {
+    padding: 18px;
+  }
 }
 
-.landing-page-text {
-  color: white;
-  font-family: "Aquire";
-  font-size: 42px;
-  margin: 24px 0 0 0;
-}
-
-.schools-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  width: 100%;
-}
-.schools-container .school-container {
+#education-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 24px;
-  width: 300px;
-}
-.schools-container .school-container img {
-  width: 200px;
-  margin: 0 0 12px 0;
-  border: white solid;
-  padding: 8px;
-}
-.schools-container .school-container p {
-  margin: unset;
-  font-size: 20px;
-  text-align: center;
-  color: white;
-  word-wrap: none;
-  font-family: "Trebuchet MS";
 }
 
-.skill-category-container {
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  margin: 0 24px;
-  padding: 12px;
+@media screen and (max-width: 1249px) {
+  #schools-container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 }
-.skill-category-container .skill-category-text {
-  transform: rotate(90deg);
+@media screen and (min-width: 1250px) {
+  #schools-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+}
+#schools-container .school-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+}
+@media screen and (max-width: 1249px) {
+  #schools-container .school-container {
+    margin: 12px 0;
+  }
+  #schools-container .school-container img {
+    width: 100px;
+    margin: 12px 0;
+    border: white solid;
+    padding: 8px;
+  }
+  #schools-container .school-container p {
+    margin: unset;
+    font-size: 14px;
+    text-align: center;
+    color: white;
+    word-wrap: none;
+    font-family: "Trebuchet MS";
+  }
+}
+@media screen and (min-width: 1250px) {
+  #schools-container .school-container {
+    margin: 0 24px;
+  }
+  #schools-container .school-container img {
+    width: 200px;
+    margin: 0 0 12px 0;
+    border: white solid;
+    padding: 8px;
+  }
+  #schools-container .school-container p {
+    margin: unset;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    word-wrap: none;
+    font-family: "Trebuchet MS";
+  }
+}
+
+@media screen and (max-width: 1249px) {
+  .skill-category-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 12px 0;
+  }
+}
+@media screen and (min-width: 1250px) {
+  .skill-category-container {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin: 0 24px;
+    padding: 12px;
+  }
 }
 .skill-category-container h1 {
-  color: white;
-  font-family: "Aquire";
-  font-size: 42px;
-  margin: 24px 0 0 0;
-  color: white;
   margin: unset;
   white-space: nowrap;
 }
+@media screen and (max-width: 549px) {
+  .skill-category-container h1 {
+    color: white;
+    font-family: "Aquire";
+    font-size: 16px;
+    margin: 0 0 12px;
+  }
+}
+@media screen and (min-width: 550px) {
+  .skill-category-container h1 {
+    color: white;
+    font-family: "Aquire";
+    font-size: 42px;
+    margin: 24px 0 0 0;
+  }
+}
 
-.skill-icon {
-  width: 48px;
-  animation: swoop-in 3.5s;
-  margin: 8px;
+@media screen and (max-width: 1249px) {
+  #skills-divider {
+    align-self: center;
+    width: 80%;
+    height: 2px;
+    border-top: solid orange;
+    margin: 12px 0 0;
+  }
+}
+@media screen and (min-width: 1250px) {
+  #skills-divider {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1249px) {
+  .skill-icon {
+    width: 24px;
+    height: 24px;
+    animation: swoop-in 3.5s;
+  }
+}
+@media screen and (min-width: 1250px) {
+  .skill-icon {
+    width: 48px;
+    width: 48px;
+    animation: swoop-in 3.5s;
+    margin: 8px;
+  }
 }
 
 .typing-effect-text {
-  color: white;
-  font-family: "Aquire";
-  font-size: 42px;
-  margin: 24px 0 0 0;
   overflow: hidden;
   border-right: 0.1em solid orange;
   white-space: nowrap;
@@ -136,40 +235,27 @@ body {
   margin: 24px auto;
   animation: typing 3.5s steps(30, end), blink-caret 0.75s step-end infinite;
 }
-
-#education-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  height: 800px;
+@media screen and (max-width: 549px) {
+  .typing-effect-text {
+    color: white;
+    font-family: "Aquire";
+    font-size: 16px;
+    margin: 0 0 12px;
+  }
 }
-#education-container h1 {
-  color: white;
-  font-family: "Aquire";
-  font-size: 42px;
-  margin: 24px 0 0 0;
-  text-align: center;
-  border: orange solid;
-  padding: 18px;
+@media screen and (min-width: 550px) {
+  .typing-effect-text {
+    color: white;
+    font-family: "Aquire";
+    font-size: 42px;
+    margin: 24px 0 0 0;
+  }
 }
 
 #experience-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-  height: 900px;
-}
-#experience-container h1 {
-  color: white;
-  font-family: "Aquire";
-  font-size: 42px;
-  margin: 24px 0 0 0;
-  text-align: center;
-  border: orange solid;
-  padding: 18px;
-  margin: 0 0 18px;
 }
 #experience-container .job-header-container {
   display: flex;
@@ -192,6 +278,11 @@ body {
   flex-direction: column;
   align-items: center;
 }
+@media screen and (min-width: 1250px) {
+  #experience-container .job-responsibilities-container {
+    width: 69%;
+  }
+}
 #experience-container .job-responsibilities-container li {
   color: white;
   margin: 8px;
@@ -206,12 +297,24 @@ body {
   margin: 0 0 100px;
 }
 #experience-container .job-container img {
-  width: 125px;
-  height: 125px;
-  padding: 12px;
-  margin: 8px;
   background-color: white;
   border-radius: 50%;
+}
+@media screen and (max-width: 1249px) {
+  #experience-container .job-container img {
+    width: 100px;
+    height: 100px;
+    padding: 8px;
+    margin: 24px 0 0;
+  }
+}
+@media screen and (min-width: 1250px) {
+  #experience-container .job-container img {
+    width: 125px;
+    height: 125px;
+    padding: 12px;
+    margin: 24px 0 0;
+  }
 }
 #experience-container .job-skills-container {
   display: flex;
@@ -233,41 +336,81 @@ body {
 #footer-container {
   display: flex;
   flex-direction: column;
+  align-items: center;
   background-color: rgb(44, 44, 50);
   border-top: 1px solid orange;
   position: fixed;
   bottom: 0;
   width: 100%;
-  height: 100px;
-  align-items: center;
-  margin: 24px 0 0;
+}
+@media screen and (min-width: 1249px) {
+  #footer-container {
+    height: 75px;
+    margin: 12px 0 0;
+  }
+}
+@media screen and (min-width: 1250px) {
+  #footer-container {
+    height: 100px;
+    margin: 24px 0 0;
+  }
 }
 #footer-container #resume-link {
   color: white;
   font-family: "Trebuchet MS";
-  font-size: large;
   text-decoration: none;
   border: 1px solid orange;
   padding: 8px;
+}
+@media screen and (max-width: 1249px) {
+  #footer-container #resume-link {
+    font-size: medium;
+  }
+}
+@media screen and (min-width: 1250px) {
+  #footer-container #resume-link {
+    font-size: large;
+  }
 }
 
 #footer-icons-container {
   display: flex;
   flex-direction: row;
   margin: 24px 0;
-  width: 500px;
   align-items: center;
   justify-content: space-around;
 }
-#footer-icons-container .footer-icon {
-  width: 50px;
+@media screen and (max-width: 1249px) {
+  #footer-icons-container {
+    width: 380px;
+  }
+  #footer-icons-container .footer-icon {
+    width: 36px;
+  }
+}
+@media screen and (min-width: 1250px) {
+  #footer-icons-container {
+    width: 500px;
+  }
+  #footer-icons-container .footer-icon {
+    width: 50px;
+  }
 }
 
 #resume-header-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 100px 0 0;
+}
+@media screen and (max-width: 1249px) {
+  #resume-header-container {
+    margin: 48px 0 24px;
+  }
+}
+@media screen and (min-width: 1250px) {
+  #resume-header-container {
+    margin: 100px 0 0;
+  }
 }
 
 #root {
@@ -277,17 +420,91 @@ body {
   align-items: center;
 }
 
-#skills-container {
+@media screen and (max-width: 1249px) {
+  #skill-column-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 1250px) {
+  #skill-column-container {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+#skill-section-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  height: 600px;
+  align-items: center;
+}
+@media screen and (max-width: 1249px) {
+  #skill-section-container .skill-category-text {
+    border: solid orange;
+    padding: 8px;
+  }
+  #skill-section-container #skills-label {
+    display: none;
+  }
+}
+#skill-section-container #skills-label {
+  transform: rotate(90deg);
+}
+#skill-section-container .skill-category-text {
+  transform: rotate(90deg);
 }
 
-#skills-label {
-  margin: 0 24px;
-  border: orange solid;
-  padding: 18px;
+.section-container {
+  height: fit-content;
+  width: 90%;
+}
+@media screen and (max-width: 1249px) {
+  .section-container {
+    margin: 0 0 24px;
+    border-top: solid orange;
+  }
+}
+@media screen and (min-width: 1250px) {
+  .section-container {
+    margin: 48px 0;
+  }
+}
+
+.section-label {
+  height: fit-content;
+  width: fit-content;
+}
+@media screen and (max-width: 549px) {
+  .section-label {
+    color: white;
+    font-family: "Aquire";
+    font-size: 16px;
+    margin: 0 0 12px;
+  }
+}
+@media screen and (min-width: 550px) {
+  .section-label {
+    color: white;
+    font-family: "Aquire";
+    font-size: 42px;
+    margin: 24px 0 0 0;
+  }
+}
+@media screen and (max-width: 1249px) {
+  .section-label {
+    margin: 24px 0 0;
+    border: orange solid;
+    padding: 8px;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 1250px) {
+  .section-label {
+    margin: 0 0 24px;
+    border: 2px solid orange;
+    padding: 18px;
+  }
 }
 
 /*# sourceMappingURL=output.css.map */

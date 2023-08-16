@@ -26,9 +26,9 @@ function Education() {
     });
 
     return (
-        <div id="education-container">
-            <h1 className="education-header-text">Education</h1>
-            <div className="schools-container">
+        <div className="section-container" id="education-container">
+            <h1 className="section-label">Education</h1>
+            <div id="schools-container">
                 {generateEducation}
             </div>
         </div>
