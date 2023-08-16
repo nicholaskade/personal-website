@@ -66,7 +66,7 @@ body {
 .header-text {
   border: orange solid;
 }
-@media screen and (max-width: 549px) {
+@media screen and (max-width: 1249px) {
   .header-text {
     color: white;
     font-family: "Aquire";
@@ -74,7 +74,7 @@ body {
     margin: 0 0 12px;
   }
 }
-@media screen and (min-width: 550px) {
+@media screen and (min-width: 1250px) {
   .header-text {
     color: white;
     font-family: "Aquire";
@@ -179,7 +179,7 @@ body {
   margin: unset;
   white-space: nowrap;
 }
-@media screen and (max-width: 549px) {
+@media screen and (max-width: 1249px) {
   .skill-category-container h1 {
     color: white;
     font-family: "Aquire";
@@ -187,7 +187,7 @@ body {
     margin: 0 0 12px;
   }
 }
-@media screen and (min-width: 550px) {
+@media screen and (min-width: 1250px) {
   .skill-category-container h1 {
     color: white;
     font-family: "Aquire";
@@ -235,7 +235,7 @@ body {
   margin: 24px auto;
   animation: typing 3.5s steps(30, end), blink-caret 0.75s step-end infinite;
 }
-@media screen and (max-width: 549px) {
+@media screen and (max-width: 1249px) {
   .typing-effect-text {
     color: white;
     font-family: "Aquire";
@@ -243,7 +243,7 @@ body {
     margin: 0 0 12px;
   }
 }
-@media screen and (min-width: 550px) {
+@media screen and (min-width: 1250px) {
   .typing-effect-text {
     color: white;
     font-family: "Aquire";
@@ -475,7 +475,7 @@ body {
   height: fit-content;
   width: fit-content;
 }
-@media screen and (max-width: 549px) {
+@media screen and (max-width: 1249px) {
   .section-label {
     color: white;
     font-family: "Aquire";
@@ -483,7 +483,7 @@ body {
     margin: 0 0 12px;
   }
 }
-@media screen and (min-width: 550px) {
+@media screen and (min-width: 1250px) {
   .section-label {
     color: white;
     font-family: "Aquire";
