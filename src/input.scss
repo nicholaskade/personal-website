@@ -73,6 +73,10 @@ body {
 .bullet-points-container {
     @include flex-column();
 
+    @media screen and (max-width: 1249px) {
+        width: 210px;
+    }
+
     .bullet-point-container {
         @include flex-row();
         align-items: center;
@@ -146,7 +150,7 @@ body {
     
             p {
                 margin: unset;
-                font-size: 14px;
+                font-size: large;
                 text-align: center;
                 color: white;
                 word-wrap: none;
@@ -180,7 +184,9 @@ body {
     @media screen and (max-width: 1249px) {
         @include flex-row();
         align-items: center;
+        justify-content: center;
         margin: 12px 0;
+        width: 210px;
     }
 
     @media screen and (min-width: 1250px) {
@@ -201,7 +207,7 @@ body {
 #skills-divider {
     @media screen and (max-width: 1249px) {
         align-self: center;
-        width: 80%;
+        width: 200px;
         height: 2px;
         border-top: solid orange;
         margin: 12px 0 0;
