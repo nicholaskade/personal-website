@@ -18,7 +18,7 @@
         color: white;
         font-family: "Aquire";
         font-size: 16px;
-        margin: 0 0 12px;
+        margin: 12px 0 0;
     }
 
     @media screen and (min-width: 1250px) {
@@ -98,8 +98,25 @@ body {
             }
         }
     }
+}
 
+.gallery-button {
+    background-color: unset;
+    color: white;
+    border: 1px solid orange;
+    font-family: 'Aquire';
+    font-size: x-large;
+    transform: rotate(90deg);
+    padding: 8px 12px;
 
+    @media screen and (max-width: 1249px) {
+        display: none;
+    }
+}
+
+.gallery-button:disabled {
+    color: grey;
+    border: 1px solid grey;
 }
 
 .header-text {
@@ -115,68 +132,217 @@ body {
     border: orange solid;
 }
 
-#education-container {
-    @include flex-column;
+.job-container {
+    @include flex-column();
+    justify-content: center;
     align-items: center;
-}
+    height: 100%;
+    margin: 0 0 100px;
 
-
-#schools-container {
-    @media screen and (max-width: 1249px) {
-        display: flex;
-        flex-direction: column-reverse;    
-    }
-
-    @media screen and (min-width: 1250px) {
-        @include flex-row();
-        align-items: center;
-        justify-content: center;
-    }
-
-    .school-container {
-        @include flex-column();
-        align-items: center;
-        width: 300px;
-
+    img {
         @media screen and (max-width: 1249px) {
-            margin: 12px 0;
-
-            img {
-                width: 100px;
-                margin: 12px 0;
-                border: white solid; 
-                padding: 8px;
-            }
-    
-            p {
-                margin: unset;
-                font-size: large;
-                text-align: center;
-                color: white;
-                word-wrap: none;
-                font-family: "Trebuchet MS";
-            }
+            width: 100px;
+            height: 100px;
+            padding: 8px;
+            margin: 24px 0 0;
         }
     
         @media screen and (min-width: 1250px) {
-            margin: 0 24px;
-
-            img {
-                width: 200px;
-                margin: 0 0 12px 0;
-                border: white solid; 
-                padding: 8px;
-            }
-    
-            p {
-                margin: unset;
-                font-size: 20px;
-                text-align: center;
-                color: white;
-                word-wrap: none;
-                font-family: "Trebuchet MS";
-            }
+            width: 125px;
+            height: 125px;
+            padding: 12px;
+            margin: 24px 0 0;
         }
+
+        background-color: white;
+        border-radius: 50%;
+    }
+}
+
+.job-header-container {
+    @include flex-row();
+    align-items: center;
+
+    h2 {
+        color: white;
+        text-align: center;
+        margin: 8px !important;
+    }
+
+    p {
+        color: white;
+        text-align: center;
+        margin: unset;
+        font-size: large;
+    }
+}
+
+.list-container {
+    @media screen and (min-width: 1250px) {
+        width: 1000px;
+    }
+
+    li {
+        color: white;
+        margin: 8px;
+        font-size: large;
+    }
+}
+
+.project-link {
+    color: orange;
+}
+
+.project-link:hover {
+    color: white;
+}
+
+.project-link-container {
+    @include flex-row();
+    gap: 8px;
+    color: orange;
+    p {
+        margin: unset;
+    }
+}
+
+.skill-tag-container {
+    @include flex-row();
+    justify-content: center;
+    flex-wrap: wrap;
+
+    @media screen and (max-width: 1249px) {
+        margin: 12px 0;
+    }
+
+    @media screen and (min-width: 1250px) {
+        margin: 24px 0 12px;
+    }
+    
+    p {
+        color: white;
+        margin: 2px !important;
+        border: 1px orange solid;
+        border-radius: 8px;
+        padding: 4px 8px;
+        text-align: center;
+        font-size: large;
+    }
+}
+
+.job-title-container {
+    @include flex-column();
+    align-items: center;
+}
+
+.project-container {
+    @include flex-row();
+    align-items: center;
+}
+
+.project-name {
+    font-family: 'Aquire';
+    color: white;
+
+    @media screen and (max-width: 1249px) {
+        font-size: 24px;
+        margin: 12px 0 0;
+    }
+
+    @media screen and (min-width: 1250px) {
+        font-size: 42px;
+        margin: 24px 0 0;
+    }
+}
+
+.project-screenshot {
+    @media screen and (max-width: 1249px) {
+        margin: 12px 0 0 0;
+        width: 400px;
+    }
+
+    @media screen and (min-width: 1250px) {
+        margin: 24px 0 0 0;
+        width: 1100px;
+    }
+}
+
+.school-container {
+    @include flex-column();
+    align-items: center;
+    width: 300px;
+
+    @media screen and (max-width: 1249px) {
+        margin: 12px 0;
+
+        img {
+            width: 100px;
+            margin: 12px 0;
+            border: white solid; 
+            padding: 8px;
+        }
+
+        p {
+            margin: unset;
+            font-size: large;
+            text-align: center;
+            color: white;
+            word-wrap: none;
+            font-family: "Trebuchet MS";
+        }
+    }
+
+    @media screen and (min-width: 1250px) {
+        margin: 0 24px;
+
+        img {
+            width: 200px;
+            margin: 0 0 12px 0;
+            border: white solid; 
+            padding: 8px;
+        }
+
+        p {
+            margin: unset;
+            font-size: 20px;
+            text-align: center;
+            color: white;
+            word-wrap: none;
+            font-family: "Trebuchet MS";
+        }
+    }
+}
+
+.section-container {
+    height: fit-content;
+    width: 90%;
+
+    @media screen and (max-width: 1249px) {
+        margin: 0 0 24px;
+        border-top: solid orange;
+    }
+
+    @media screen and (min-width: 1250px) {
+        margin: 48px 0;
+    }
+}
+
+.section-label {
+    @include site-text();
+    height: fit-content;
+    width: fit-content;
+
+    @media screen and (max-width: 1249px) {
+        margin: 24px 0 0;
+        border: orange solid;
+        padding: 8px;
+        text-align: center;
+    }
+
+    @media screen and (min-width: 1250px) {
+        margin: 0 0 24px;
+        border: 2px solid orange;
+        padding: 18px;
     }
 }
 
@@ -204,20 +370,6 @@ body {
     }
 }
 
-#skills-divider {
-    @media screen and (max-width: 1249px) {
-        align-self: center;
-        width: 200px;
-        height: 2px;
-        border-top: solid orange;
-        margin: 12px 0 0;
-    }
-
-    @media screen and (min-width: 1250px) {
-        display: none;
-    }
-}
-
 .skill-icon {
     @media screen and (max-width: 1249px) {
         width: 24px;
@@ -231,7 +383,6 @@ body {
         animation: swoop-in 3.5s;
         margin: 8px;
     }
-
 }
 
 .typing-effect-text {
@@ -248,88 +399,14 @@ body {
 
 // IDs 
 
+#education-container {
+    @include flex-column;
+    align-items: center;
+}
+
 #experience-container {
     @include flex-column();
     align-items: center;
-
-    .job-header-container {
-        @include flex-row();
-        align-items: center;
-
-        h2 {
-            color: white;
-            text-align: center;
-            margin: 8px !important;
-        }
-
-        p {
-            color: white;
-            text-align: center;
-            margin: unset;
-            font-size: large;
-        }
-    }
-
-    .job-title-container {
-        @include flex-column();
-        align-items: center;
-    }
-
-    .job-responsibilities-container {
-        @media screen and (min-width: 1250px) {
-            width: 69%;
-        }
-
-        li {
-            color: white;
-            margin: 8px;
-            font-size: large;
-        }
-    }
-
-    .job-container {
-        @include flex-column();
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        margin: 0 0 100px;
-
-        img {
-            @media screen and (max-width: 1249px) {
-                width: 100px;
-                height: 100px;
-                padding: 8px;
-                margin: 24px 0 0;
-            }
-        
-            @media screen and (min-width: 1250px) {
-                width: 125px;
-                height: 125px;
-                padding: 12px;
-                margin: 24px 0 0;
-            }
- 
-            background-color: white;
-            border-radius: 50%;
-        }
-    }
-
-    .job-skills-container {
-        @include flex-row();
-        justify-content: center;
-        flex-wrap: wrap;
-        margin: 24px 0 12px;
-        
-        p {
-            color: white;
-            margin: 2px !important;
-            border: 1px orange solid;
-            border-radius: 8px;
-            padding: 4px 8px;
-            text-align: center;
-            font-size: large;
-        }
-    }
 }
 
 #footer-container {
@@ -339,6 +416,7 @@ body {
     border-top: 1px solid orange;
     position: fixed;
     bottom: 0;
+    z-index: 1000;
     width: 100%;
 
     @media screen and (min-width: 1249px) {
@@ -390,6 +468,14 @@ body {
     }
 }
 
+#projects-container {
+    @include flex-column();
+    align-items: center;
+    @media screen and (min-width: 1250px) {
+        width: fit-content;
+    }
+}
+
 #resume-header-container {  
     @include flex-column();
     align-items: center;
@@ -408,6 +494,20 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+#schools-container {
+    @media screen and (max-width: 1249px) {
+        display: flex;
+        flex-direction: column-reverse;    
+    }
+
+    @media screen and (min-width: 1250px) {
+        @include flex-row();
+        align-items: center;
+        justify-content: center;
+        margin: 24px 0 0;
+    }
 }
 
 #skill-column-container {
@@ -446,35 +546,16 @@ body {
     }
 }
 
-.section-container {
-    height: fit-content;
-    width: 90%;
-
+#skills-divider {
     @media screen and (max-width: 1249px) {
-        margin: 0 0 24px;
+        align-self: center;
+        width: 200px;
+        height: 2px;
         border-top: solid orange;
+        margin: 12px 0 0;
     }
 
     @media screen and (min-width: 1250px) {
-        margin: 48px 0;
-    }
-}
-
-.section-label {
-    @include site-text();
-    height: fit-content;
-    width: fit-content;
-
-    @media screen and (max-width: 1249px) {
-        margin: 24px 0 0;
-        border: orange solid;
-        padding: 8px;
-        text-align: center;
-    }
-
-    @media screen and (min-width: 1250px) {
-        margin: 0 0 24px;
-        border: 2px solid orange;
-        padding: 18px;
+        display: none;
     }
 }

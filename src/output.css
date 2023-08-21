@@ -68,6 +68,26 @@ body {
   }
 }
 
+.gallery-button {
+  background-color: unset;
+  color: white;
+  border: 1px solid orange;
+  font-family: "Aquire";
+  font-size: x-large;
+  transform: rotate(90deg);
+  padding: 8px 12px;
+}
+@media screen and (max-width: 1249px) {
+  .gallery-button {
+    display: none;
+  }
+}
+
+.gallery-button:disabled {
+  color: grey;
+  border: 1px solid grey;
+}
+
 .header-text {
   border: orange solid;
 }
@@ -76,7 +96,7 @@ body {
     color: white;
     font-family: "Aquire";
     font-size: 16px;
-    margin: 0 0 12px;
+    margin: 12px 0 0;
   }
 }
 @media screen and (min-width: 1250px) {
@@ -98,43 +118,166 @@ body {
   }
 }
 
-#education-container {
+.job-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: 0 0 100px;
+}
+.job-container img {
+  background-color: white;
+  border-radius: 50%;
+}
+@media screen and (max-width: 1249px) {
+  .job-container img {
+    width: 100px;
+    height: 100px;
+    padding: 8px;
+    margin: 24px 0 0;
+  }
+}
+@media screen and (min-width: 1250px) {
+  .job-container img {
+    width: 125px;
+    height: 125px;
+    padding: 12px;
+    margin: 24px 0 0;
+  }
+}
+
+.job-header-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.job-header-container h2 {
+  color: white;
+  text-align: center;
+  margin: 8px !important;
+}
+.job-header-container p {
+  color: white;
+  text-align: center;
+  margin: unset;
+  font-size: large;
+}
+
+@media screen and (min-width: 1250px) {
+  .list-container {
+    width: 1000px;
+  }
+}
+.list-container li {
+  color: white;
+  margin: 8px;
+  font-size: large;
+}
+
+.project-link {
+  color: orange;
+}
+
+.project-link:hover {
+  color: white;
+}
+
+.project-link-container {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  color: orange;
+}
+.project-link-container p {
+  margin: unset;
+}
+
+.skill-tag-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 1249px) {
+  .skill-tag-container {
+    margin: 12px 0;
+  }
+}
+@media screen and (min-width: 1250px) {
+  .skill-tag-container {
+    margin: 24px 0 12px;
+  }
+}
+.skill-tag-container p {
+  color: white;
+  margin: 2px !important;
+  border: 1px orange solid;
+  border-radius: 8px;
+  padding: 4px 8px;
+  text-align: center;
+  font-size: large;
+}
+
+.job-title-container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+.project-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.project-name {
+  font-family: "Aquire";
+  color: white;
+}
 @media screen and (max-width: 1249px) {
-  #schools-container {
-    display: flex;
-    flex-direction: column-reverse;
+  .project-name {
+    font-size: 24px;
+    margin: 12px 0 0;
   }
 }
 @media screen and (min-width: 1250px) {
-  #schools-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+  .project-name {
+    font-size: 42px;
+    margin: 24px 0 0;
   }
 }
-#schools-container .school-container {
+
+@media screen and (max-width: 1249px) {
+  .project-screenshot {
+    margin: 12px 0 0 0;
+    width: 400px;
+  }
+}
+@media screen and (min-width: 1250px) {
+  .project-screenshot {
+    margin: 24px 0 0 0;
+    width: 1100px;
+  }
+}
+
+.school-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 300px;
 }
 @media screen and (max-width: 1249px) {
-  #schools-container .school-container {
+  .school-container {
     margin: 12px 0;
   }
-  #schools-container .school-container img {
+  .school-container img {
     width: 100px;
     margin: 12px 0;
     border: white solid;
     padding: 8px;
   }
-  #schools-container .school-container p {
+  .school-container p {
     margin: unset;
     font-size: large;
     text-align: center;
@@ -144,22 +287,74 @@ body {
   }
 }
 @media screen and (min-width: 1250px) {
-  #schools-container .school-container {
+  .school-container {
     margin: 0 24px;
   }
-  #schools-container .school-container img {
+  .school-container img {
     width: 200px;
     margin: 0 0 12px 0;
     border: white solid;
     padding: 8px;
   }
-  #schools-container .school-container p {
+  .school-container p {
     margin: unset;
     font-size: 20px;
     text-align: center;
     color: white;
     word-wrap: none;
     font-family: "Trebuchet MS";
+  }
+}
+
+.section-container {
+  height: fit-content;
+  width: 90%;
+}
+@media screen and (max-width: 1249px) {
+  .section-container {
+    margin: 0 0 24px;
+    border-top: solid orange;
+  }
+}
+@media screen and (min-width: 1250px) {
+  .section-container {
+    margin: 48px 0;
+  }
+}
+
+.section-label {
+  height: fit-content;
+  width: fit-content;
+}
+@media screen and (max-width: 1249px) {
+  .section-label {
+    color: white;
+    font-family: "Aquire";
+    font-size: 16px;
+    margin: 12px 0 0;
+  }
+}
+@media screen and (min-width: 1250px) {
+  .section-label {
+    color: white;
+    font-family: "Aquire";
+    font-size: 42px;
+    margin: 24px 0 0 0;
+  }
+}
+@media screen and (max-width: 1249px) {
+  .section-label {
+    margin: 24px 0 0;
+    border: orange solid;
+    padding: 8px;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 1250px) {
+  .section-label {
+    margin: 0 0 24px;
+    border: 2px solid orange;
+    padding: 18px;
   }
 }
 
@@ -191,7 +386,7 @@ body {
     color: white;
     font-family: "Aquire";
     font-size: 16px;
-    margin: 0 0 12px;
+    margin: 12px 0 0;
   }
 }
 @media screen and (min-width: 1250px) {
@@ -200,21 +395,6 @@ body {
     font-family: "Aquire";
     font-size: 42px;
     margin: 24px 0 0 0;
-  }
-}
-
-@media screen and (max-width: 1249px) {
-  #skills-divider {
-    align-self: center;
-    width: 200px;
-    height: 2px;
-    border-top: solid orange;
-    margin: 12px 0 0;
-  }
-}
-@media screen and (min-width: 1250px) {
-  #skills-divider {
-    display: none;
   }
 }
 
@@ -247,7 +427,7 @@ body {
     color: white;
     font-family: "Aquire";
     font-size: 16px;
-    margin: 0 0 12px;
+    margin: 12px 0 0;
   }
 }
 @media screen and (min-width: 1250px) {
@@ -259,85 +439,16 @@ body {
   }
 }
 
+#education-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 #experience-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-#experience-container .job-header-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-#experience-container .job-header-container h2 {
-  color: white;
-  text-align: center;
-  margin: 8px !important;
-}
-#experience-container .job-header-container p {
-  color: white;
-  text-align: center;
-  margin: unset;
-  font-size: large;
-}
-#experience-container .job-title-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-@media screen and (min-width: 1250px) {
-  #experience-container .job-responsibilities-container {
-    width: 69%;
-  }
-}
-#experience-container .job-responsibilities-container li {
-  color: white;
-  margin: 8px;
-  font-size: large;
-}
-#experience-container .job-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  margin: 0 0 100px;
-}
-#experience-container .job-container img {
-  background-color: white;
-  border-radius: 50%;
-}
-@media screen and (max-width: 1249px) {
-  #experience-container .job-container img {
-    width: 100px;
-    height: 100px;
-    padding: 8px;
-    margin: 24px 0 0;
-  }
-}
-@media screen and (min-width: 1250px) {
-  #experience-container .job-container img {
-    width: 125px;
-    height: 125px;
-    padding: 12px;
-    margin: 24px 0 0;
-  }
-}
-#experience-container .job-skills-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin: 24px 0 12px;
-}
-#experience-container .job-skills-container p {
-  color: white;
-  margin: 2px !important;
-  border: 1px orange solid;
-  border-radius: 8px;
-  padding: 4px 8px;
-  text-align: center;
-  font-size: large;
 }
 
 #footer-container {
@@ -348,6 +459,7 @@ body {
   border-top: 1px solid orange;
   position: fixed;
   bottom: 0;
+  z-index: 1000;
   width: 100%;
 }
 @media screen and (min-width: 1249px) {
@@ -404,6 +516,17 @@ body {
   }
 }
 
+#projects-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 1250px) {
+  #projects-container {
+    width: fit-content;
+  }
+}
+
 #resume-header-container {
   display: flex;
   flex-direction: column;
@@ -425,6 +548,22 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+@media screen and (max-width: 1249px) {
+  #schools-container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+@media screen and (min-width: 1250px) {
+  #schools-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 24px 0 0;
+  }
 }
 
 @media screen and (max-width: 1249px) {
@@ -462,55 +601,18 @@ body {
   transform: rotate(90deg);
 }
 
-.section-container {
-  height: fit-content;
-  width: 90%;
-}
 @media screen and (max-width: 1249px) {
-  .section-container {
-    margin: 0 0 24px;
+  #skills-divider {
+    align-self: center;
+    width: 200px;
+    height: 2px;
     border-top: solid orange;
+    margin: 12px 0 0;
   }
 }
 @media screen and (min-width: 1250px) {
-  .section-container {
-    margin: 48px 0;
-  }
-}
-
-.section-label {
-  height: fit-content;
-  width: fit-content;
-}
-@media screen and (max-width: 1249px) {
-  .section-label {
-    color: white;
-    font-family: "Aquire";
-    font-size: 16px;
-    margin: 0 0 12px;
-  }
-}
-@media screen and (min-width: 1250px) {
-  .section-label {
-    color: white;
-    font-family: "Aquire";
-    font-size: 42px;
-    margin: 24px 0 0 0;
-  }
-}
-@media screen and (max-width: 1249px) {
-  .section-label {
-    margin: 24px 0 0;
-    border: orange solid;
-    padding: 8px;
-    text-align: center;
-  }
-}
-@media screen and (min-width: 1250px) {
-  .section-label {
-    margin: 0 0 24px;
-    border: 2px solid orange;
-    padding: 18px;
+  #skills-divider {
+    display: none;
   }
 }
 

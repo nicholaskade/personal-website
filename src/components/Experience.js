@@ -13,7 +13,7 @@ function Experience() {
                         <p>Mansueto Ventures, LLC</p>
                         <p>August 2021 - October 2022</p>
                         
-                        <div className="job-skills-container">
+                        <div className="skill-tag-container">
                             <p>HTML</p>
                             <p>Cross-Functional Coordination</p>
                             <p>Account Management</p>
@@ -22,7 +22,7 @@ function Experience() {
                     </div>
                 </div>
 
-                <div className="job-responsibilities-container">
+                <div className="list-container">
                     <ul>
                         <li>
                             <b>Managed</b> the group subscriptions program for <i>Inc. Magazine</i> and <i>Fast Company</i> by communicating with an array of clients, ranging from small businesses to Fortune 500 companies
