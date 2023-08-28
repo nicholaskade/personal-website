@@ -22,8 +22,13 @@ function Projects() {
             <div className="project-container">
                 {
                     genialImage === 0 ?
-                    <button className="gallery-button" disabled>Back</button> :
-                    <button className="gallery-button" onClick={() => handleGoBack()}>Back</button>
+                    <div id="project-back-button-container">
+                        <button className="gallery-button" disabled>Back</button> 
+                    </div>
+                        :
+                    <div id="project-back-button-container">
+                        <button className="gallery-button" onClick={() => handleGoBack()}>Back</button>
+                    </div>
                 }
                 <img 
                     className="project-screenshot" 
@@ -31,8 +36,13 @@ function Projects() {
                 />
                 {
                     genialImage === 2 ?
-                    <button className="gallery-button" disabled>Next</button> :
-                    <button className="gallery-button" onClick={() => handleNext()}>Next</button>
+                    <div id="project-next-button-container">
+                        <button className="gallery-button" disabled>Next</button>
+                    </div> 
+                        :
+                    <div id="project-next-button-container">
+                        <button className="gallery-button" onClick={() => handleNext()}>Next</button>
+                    </div>
                 }
             </div>
             <h1 className="project-name">Genial</h1>
@@ -41,7 +51,7 @@ function Projects() {
                 <p>REST API</p>
                 <p>Bootstrap</p>
                 <p>HTML</p>
-                <p>CSS</p>
+                <p>SASS</p>
             </div>
             <div className="project-link-container">
                 <a href="https://genial-app.com" className="project-link">Site Link</a>

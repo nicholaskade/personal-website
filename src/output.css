@@ -68,26 +68,6 @@ body {
   }
 }
 
-.gallery-button {
-  background-color: unset;
-  color: white;
-  border: 1px solid orange;
-  font-family: "Aquire";
-  font-size: x-large;
-  transform: rotate(90deg);
-  padding: 8px 12px;
-}
-@media screen and (max-width: 1249px) {
-  .gallery-button {
-    display: none;
-  }
-}
-
-.gallery-button:disabled {
-  color: grey;
-  border: 1px solid grey;
-}
-
 .header-text {
   border: orange solid;
 }
@@ -225,12 +205,6 @@ body {
   align-items: center;
 }
 
-.project-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
 .project-name {
   font-family: "Aquire";
   color: white;
@@ -245,19 +219,6 @@ body {
   .project-name {
     font-size: 42px;
     margin: 24px 0 0;
-  }
-}
-
-@media screen and (max-width: 1249px) {
-  .project-screenshot {
-    margin: 12px 0 0 0;
-    width: 400px;
-  }
-}
-@media screen and (min-width: 1250px) {
-  .project-screenshot {
-    margin: 24px 0 0 0;
-    width: 1100px;
   }
 }
 
@@ -614,6 +575,93 @@ body {
   #skills-divider {
     display: none;
   }
+}
+
+#project-back-button-container {
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 1249px) {
+  #project-back-button-container {
+    height: 110px;
+    width: 100px;
+    position: absolute;
+    bottom: 50px;
+  }
+}
+
+#project-next-button-container {
+  display: flex;
+  z-index: 999;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 1249px) {
+  #project-next-button-container {
+    height: 110px;
+    width: 100px;
+    position: absolute;
+    right: 0px;
+    bottom: 50px;
+  }
+}
+
+.gallery-button {
+  z-index: 999;
+  background-color: unset;
+  font-family: "Aquire";
+  font-size: x-large;
+  transform: rotate(90deg);
+  padding: 8px 12px;
+}
+@media screen and (max-width: 1249px) {
+  .gallery-button {
+    position: absolute;
+    color: rgb(44, 44, 50);
+    border: 2px solid orange;
+  }
+}
+@media screen and (min-width: 1250px) {
+  .gallery-button {
+    color: white;
+    border: 1px solid orange;
+  }
+}
+
+@media screen and (max-width: 1249px) {
+  .gallery-button:disabled {
+    color: rgb(44, 44, 50);
+    border: 2px solid rgb(44, 44, 50);
+  }
+}
+@media screen and (min-width: 1250px) {
+  .gallery-button:disabled {
+    color: grey;
+    border: 1px solid grey;
+  }
+}
+
+@media screen and (max-width: 1249px) {
+  .project-screenshot {
+    margin: 12px 0 0 0;
+    width: 400px;
+    z-index: 900;
+  }
+}
+@media screen and (min-width: 1250px) {
+  .project-screenshot {
+    margin: 24px 0 0 0;
+    width: 1100px;
+  }
+}
+
+.project-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
 }
 
 /*# sourceMappingURL=output.css.map */

@@ -100,25 +100,6 @@ body {
     }
 }
 
-.gallery-button {
-    background-color: unset;
-    color: white;
-    border: 1px solid orange;
-    font-family: 'Aquire';
-    font-size: x-large;
-    transform: rotate(90deg);
-    padding: 8px 12px;
-
-    @media screen and (max-width: 1249px) {
-        display: none;
-    }
-}
-
-.gallery-button:disabled {
-    color: grey;
-    border: 1px solid grey;
-}
-
 .header-text {
     @include site-text();
     @media screen and (max-width: 1249px) {
@@ -235,11 +216,6 @@ body {
     align-items: center;
 }
 
-.project-container {
-    @include flex-row();
-    align-items: center;
-}
-
 .project-name {
     font-family: 'Aquire';
     color: white;
@@ -252,18 +228,6 @@ body {
     @media screen and (min-width: 1250px) {
         font-size: 42px;
         margin: 24px 0 0;
-    }
-}
-
-.project-screenshot {
-    @media screen and (max-width: 1249px) {
-        margin: 12px 0 0 0;
-        width: 400px;
-    }
-
-    @media screen and (min-width: 1250px) {
-        margin: 24px 0 0 0;
-        width: 1100px;
     }
 }
 
@@ -558,4 +522,84 @@ body {
     @media screen and (min-width: 1250px) {
         display: none;
     }
+}
+
+#project-back-button-container {
+    z-index: 999; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (max-width: 1249px) {
+        height: 110px;
+        width: 100px;
+        position: absolute;
+        bottom: 50px;
+    }
+}
+
+#project-next-button-container {
+    display: flex;
+    z-index: 999;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (max-width: 1249px) {
+        height: 110px;
+        width: 100px;
+        position: absolute;
+        right: 0px;
+        bottom: 50px;
+    }
+}
+
+.gallery-button {
+    z-index: 999;
+    background-color: unset;
+    font-family: 'Aquire';
+    font-size: x-large;
+    transform: rotate(90deg);
+    padding: 8px 12px;
+
+    @media screen and (max-width: 1249px) {
+        position: absolute;
+        color: rgb(44, 44, 50);
+        border: 2px solid orange;
+    }
+
+    @media screen and (min-width: 1250px) {
+        color: white;
+        border: 1px solid orange;
+    }
+}
+
+.gallery-button:disabled {
+    @media screen and (max-width: 1249px) {
+        color: rgb(44, 44, 50);
+        border: 2px solid rgb(44, 44, 50);
+    }
+
+    @media screen and (min-width: 1250px) {
+        color: grey;
+        border: 1px solid grey;
+    }
+}
+
+.project-screenshot {
+    @media screen and (max-width: 1249px) {
+        margin: 12px 0 0 0;
+        width: 400px;
+        z-index: 900;
+    }
+
+    @media screen and (min-width: 1250px) {
+        margin: 24px 0 0 0;
+        width: 1100px;
+    }
+}
+
+.project-container {
+    @include flex-row();
+    align-items: center;
+    position: relative;
 }
