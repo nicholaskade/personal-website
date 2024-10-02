@@ -8,9 +8,9 @@ function Resume() {
     return (
         <>
             <Skills/>
+            <Experience />
             <Projects />
             <Education />
-            <Experience />
         </>
     )
 };
